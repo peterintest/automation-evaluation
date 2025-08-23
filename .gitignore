@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Package installation
+*.egg-info/
+build/
+
+# Testing
+.pytest_cache/
+
+# Playwright
+test-results/
+playwright-report/
+
+# Virtual environment
+venv/
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store

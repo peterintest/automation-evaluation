@@ -1,0 +1,52 @@
+[project]
+name = "automated-test-evaluation"
+version = "0.1.0"
+description = "Automated Test Evaluation using Playwright and pytest"
+authors = [
+    { name = "Peter Johnson", email = "peterjohnson1990@gmail.com" }
+]
+dependencies = [
+    "pytest",
+    "playwright",
+    "requests",
+    "gitpython",
+    "ruff"
+]
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "-v"
+
+[tool.ruff]
+line-length = 100
+
+target-version = "py311"
+
+exclude = [
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".pytype",
+    ".ruff_cache",
+    ".pytest_cache",
+    "__pypackages__",
+    "__pycache__",
+    "venv",
+    "build",
+    "automated_test_evaluation.egg-info",
+    "*.egg-info",
+]
+
+[tool.ruff.lint]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+select = ["E", "F"]
+ignore = []
+
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
